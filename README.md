@@ -1,6 +1,27 @@
-# Typescript Package Template
-- Run `npm run init` to start
-- `npm run react` to install react dependencies
-- `npm run build`: to build module
-- `npm publish` to publish to Github registry
-- Edit `name`, `description` and `version` on `package.json`
+# Use History
+
+A lightweight React hook for a history of states (with undo/redo)
+
+## Example
+
+```jsx
+function Shop({ items }) {
+    const { present: cart, undo, redo, push } = useHistory(() => []);
+    
+    const addItem = it => push(items => [...items, it]);
+
+    return (
+        <h1>Cart</h1>
+        {cart.map(i =>
+            <p>items[i]</p>
+        )}
+        /* ... */
+        <button onClick={undo}>Undo</button>
+        <button onClick={redo}>Redo</button>
+        {items.map((item, i) => (
+            <button onClick={() => addItem(i)}>Add to cart {item.name}</button>
+        ))}
+    );
+}
+
+```

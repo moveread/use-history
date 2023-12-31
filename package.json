@@ -1,7 +1,7 @@
 {
-    "name": "@moveread/package_name",
+    "name": "@moveread/use-history",
     "version": "1.0.0",
-    "description": "package_description",
+    "description": "A lightweight React hook for a history of states (with undo/redo)",
     "main": "dist/index.js",
     "scripts": {
         "build": "npx tsc -p tsconfig.json",
@@ -11,9 +11,9 @@
     "author": "Marcel Claramunt",
     "license": "ISC",
     "devDependencies": {
-        "@types/react": "^18.2.38",
-        "@types/react-dom": "^18.2.17",
-        "typescript": "^5.3.2"
+        "@types/react": "^18.2.46",
+        "@types/react-dom": "^18.2.18",
+        "typescript": "^5.3.3"
     },
     "dependencies": {
         "react": "^18.2.0",
